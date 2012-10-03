@@ -47,7 +47,7 @@ class Site extends CI_Controller {
 	
 	function Create(){
 		
-		$msg;
+		$msg; // Varför har du denna här?
 		
 		//$msg = substr($msg,0,strpos($msg' ',50));
 		
@@ -67,7 +67,7 @@ class Site extends CI_Controller {
 	// Jag har tillgång till site_model eftersom vi autoloader den.
 	
 	$this->site_model->add_to_db($data);
-	$this->index();
+	$this->index(); // Varför inkluderar du index-funktionen istället för att skicka vidare?
 	
 	
 }
@@ -100,9 +100,10 @@ class Site extends CI_Controller {
 		    }
 	
 	//Raderar inlägg samt laddar om sidan index.
+		    // Var laddar du om sidan då?
 
 function delete(){
 	$this->site_model->delete_from_db();
-	$this->index();
+	$this->index(); // Varför inkluderar du index-funktionen istället för att skicka vidare?
 }
 }
